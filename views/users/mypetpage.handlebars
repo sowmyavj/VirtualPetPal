@@ -1,0 +1,23 @@
+<hr>
+<div class="card-columns">
+          <h1>My Pet Page</h1>
+
+{{#each pets }}
+<div class="card" style="width: 25rem;">
+  <img class="card-img-top" src="/public/images/{{ photoIds}}" alt="Card image cap" height="286" width="250">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <ul className="list-group list-group-flush">
+        <li className="list-group-item">
+            Age: {{age}}
+        </li>
+        <li className="list-group-item">
+            Description: Loves to play with the TV remote
+        </li>
+    </ul>
+
+    <a href="/users/checkPetProfile/{{pet_id}}" class="btn btn-primary">Know More About Me</a>
+  </div>
+</div>
+{{/each}}
+</div>

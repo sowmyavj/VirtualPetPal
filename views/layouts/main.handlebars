@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Virtual Pet Pal</title>
+  {{!-- <link rel="stylesheet" href="/css/bootstrap.css"/> --}}
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+  <link rel="stylesheet" href="/css/style.css"/>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="header clearfix">
+      <div>
+        {{#if user}}
+          <ul class="nav nav-pills justify-content-end">
+            <li class="nav-item">
+              <a href="/users/dashboard">Pets Dashboard  </a>
+            </li>
+            <li class="nav-item">
+              <a href="/users/profile">My Profile  </a>
+            </li>
+            <li class="nav-item">
+              <a href="/users/mypetpage">My Pets  </a>
+            </li>
+            <li class="nav-item">
+              <a href="/users/logout">Logout</a>
+            </li>
+          </ul>
+        {{else}}
+          <ul class="nav nav-pills justify-content-end">
+            <li class="nav-item">
+              <a href="/users/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a href="/users/register">Register</a>
+            </li>
+          </ul>
+        {{/if}}
+      </div>
+      <h1 class="text-muted">Virtual Pet Pal</h1>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        {{#if success_msg}}
+        <div class="alert alert-success">{{success_msg}}</div>
+        {{/if}} 
+        {{#if error_msg}}
+        <div class="alert alert-danger">{{error_msg}}</div>
+        {{/if}} 
+        {{#if error}}
+        <div class="alert alert-danger">{{error}}</div>
+        {{/if}} 
+        </div>
+      </div>
+  </div>
+
+    <div class="container">
+            {{{body}}}
+    </div>
+    <footer class="footer">
+      <p>&copy; 2018 PetPal, Inc.</p>
+    </footer>
+
+  <!-- /container -->
+  {{!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script> --}}
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+  
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <title>Virtual Pet Pal</title>
+</head>
+
+<div class="header clearfix">
+
+<h2 class="page-header">Account Login</h2>
+<form  method="post" action="/users/login">
+  <div class="form-group">
+    <label for="email">User Email</label>
+    <input type="email" class="form-control" name="email" id="email" placeholder="email">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+  <div class="form-group">
+    {{#if message }}
+    <div class="form-group">
+      <div class="alert alert-danger">
+        {{ message }}
+      </div>
+    </div>
+    {{/if}}
+  </div>
+</form>
+</div>
